@@ -13,7 +13,6 @@ public class AutomationPracticeFormPageObjectTest {
     @Test
     void fillAutomationPracticeForm() {
 
-        //simpleFields
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");

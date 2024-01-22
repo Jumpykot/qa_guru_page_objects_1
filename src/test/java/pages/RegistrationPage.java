@@ -2,11 +2,10 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
-
-import java.util.Arrays;
-import java.util.List;
+import pages.components.ModalWindowComponent;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -26,6 +25,7 @@ public class RegistrationPage {
             userCity = $("#city");
 
     CalendarComponent calendarComponent = new CalendarComponent();
+    ModalWindowComponent modalWindowComponent = new ModalWindowComponent();
 
 
     public RegistrationPage openPage() {
@@ -115,6 +115,16 @@ public class RegistrationPage {
     public RegistrationPage submit() {
         $("#submit").click();
 
+        return this;
+    }
+
+    public RegistrationPage checkUserSubmitResults (String nameResult, String value) {
+        modalWindowComponent.checkSubmittingTheForm(nameResult, value);
+        return this;
+    }
+
+    public RegistrationPage checkUserUnsuccessfulSubmit () {
+        $(".modal-content").shouldNotBe(visible);
         return this;
     }
 
