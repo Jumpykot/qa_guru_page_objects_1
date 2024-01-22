@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab326b61-0aa0-4808-840c-122035dda4fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/guru/qa/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/components/CalendarComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormPageObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationPageWithPageObjTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/apple-touch-icon.png" afterDir="false" />
+    <list default="true" id="ab326b61-0aa0-4808-840c-122035dda4fb" name="Changes" comment="Pushed second part of Home Work without TextBoxTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TextBoxTestPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TextBoxTestWithPageObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormPageObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationPageWithPageObjTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationPageWithPageObjTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +22,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,8 +56,12 @@
   "keyToString": {
     "Gradle.AutomationPracticeFormPageObjectTest.executor": "Run",
     "Gradle.RegistrationPageWithPageObjTest.executor": "Run",
+    "Gradle.RegistrationPageWithPageObjTest.minimalSuccessfulRegistrationTest.executor": "Run",
     "Gradle.RegistrationPageWithPageObjTest.successfulRegistrationTest.executor": "Run",
+    "Gradle.RegistrationPageWithPageObjTest.unsuccessfulRegistrationTest.executor": "Run",
     "Gradle.Tests in 'qa_guru_page_objects.test'.executor": "Run",
+    "Gradle.TextBoxTestWithPageObj (1).executor": "Run",
+    "Gradle.TextBoxTestWithPageObj.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -77,31 +80,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationPageWithPageObjTest">
-    <configuration name="AutomationPracticeFormPageObjectTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.AutomationPracticeFormPageObjectTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.Tests in 'qa_guru_page_objects.test'">
     <configuration name="RegistrationPageWithPageObjTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -150,6 +129,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="RegistrationPageWithPageObjTest.unsuccessfulRegistrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.RegistrationPageWithPageObjTest.unsuccessfulRegistrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests in 'qa_guru_page_objects.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,12 +175,37 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="TextBoxTestWithPageObj" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.TextBoxTestWithPageObj&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'qa_guru_page_objects.test'" />
+        <item itemvalue="Gradle.TextBoxTestWithPageObj" />
         <item itemvalue="Gradle.RegistrationPageWithPageObjTest" />
         <item itemvalue="Gradle.RegistrationPageWithPageObjTest.successfulRegistrationTest" />
-        <item itemvalue="Gradle.AutomationPracticeFormPageObjectTest" />
-        <item itemvalue="Gradle.Tests in 'qa_guru_page_objects.test'" />
+        <item itemvalue="Gradle.RegistrationPageWithPageObjTest.unsuccessfulRegistrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +226,39 @@
       <option name="presentableId" value="Default" />
       <updated>1705690502950</updated>
     </task>
+    <task id="LOCAL-00001" summary="Pushed first part of Home Work">
+      <option name="closed" value="true" />
+      <created>1705871007594</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705871007594</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Pushed second part of Home Work without TextBoxTest">
+      <option name="closed" value="true" />
+      <created>1705954137765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705954137765</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pushed first part of Home Work" />
+    <MESSAGE value="Pushed second part of Home Work without TextBoxTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushed second part of Home Work without TextBoxTest" />
   </component>
 </project>

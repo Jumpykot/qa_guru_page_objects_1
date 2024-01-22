@@ -28,8 +28,6 @@ public class RegistrationPageWithPageObjTest extends TestBase {
                 .checkUserSubmitResults("Mobile", "7123456789")
                 .checkUserSubmitResults("Date of Birth", "16 February,1995");
 
-        sleep(5000);
-
     }
 
     @Test
