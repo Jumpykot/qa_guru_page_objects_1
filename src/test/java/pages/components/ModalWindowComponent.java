@@ -11,8 +11,4 @@ public class ModalWindowComponent {
         $(".table-responsive table").$(byText(nameResult)).parent().shouldHave(text(value));
     }
 
-    public void closeModalWindow() {
-        $(".modal-footer").$("#closeLargeModal").click();
-    }
-
 }
