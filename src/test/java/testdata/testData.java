@@ -1,4 +1,4 @@
-package testData;
+package testdata;
 
 import com.github.javafaker.Faker;
 
@@ -6,7 +6,7 @@ import java.util.Locale;
 
 import static utils.RandomUtils.getRandomInt;
 
-public class RegistrationForm {
+public class testData {
 
     public Faker faker = new Faker(new Locale("eng"));
 
@@ -16,14 +16,17 @@ public class RegistrationForm {
             userAddress = getRandomAddress(),
             userPhoneNumber = getRandomPhone(),
             userGender = getRandomGender(),
-            usersDayOfBirth = String.valueOf(getRandomDay()),
             usersMonthOfBirth = getRandomMonth(),
-            usersYearOfBirth = String.valueOf(getRandomYear()),
             usersHobbie = getRandomHobbie(),
             usersPicture = "apple-touch-icon.png",
             usersSubject = getRandomSubject(),
             usersState = getRandomState(),
             usersCity = getRandomCity(usersState);
+
+
+    public Integer usersDayOfBirth = getRandomDay(),
+    usersYearOfBirth = getRandomYear();
+
 
     public String getRandomEmail() {
         return faker.internet().emailAddress();

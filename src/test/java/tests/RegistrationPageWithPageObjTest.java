@@ -18,7 +18,7 @@ public class RegistrationPageWithPageObjTest extends TestBase {
                 .setUserEmail("Buba@biba.com")
                 .setUserMobileNumber("7123456789")
                 .setGender("Male")
-                .setUserDateOfBirth("16", "February", "1995")
+                .setUserDateOfBirth(16, "February", 1995)
 
                 .submit()
 
@@ -39,7 +39,7 @@ public class RegistrationPageWithPageObjTest extends TestBase {
                 .setUserEmail("Buba@biba.com")
                 .setUserMobileNumber("7123456789")
                 .setGender("Male")
-                .setUserDateOfBirth("16", "February", "1995")
+                .setUserDateOfBirth(16, "February", 1995)
                 .setUserSubjects("Arts")
                 .setUserHobbies("Sports")
                 .uploadPicture("apple-touch-icon.png")
