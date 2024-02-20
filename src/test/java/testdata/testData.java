@@ -84,23 +84,19 @@ public class testData {
     }
 
     public String getRandomCity(String usersState) {
-        if (usersState.equals("NCR")) {
-            return faker.options().option("Delhi", "Gurgaon", "Noida");
+        switch (usersState) {
+            case "NCR":
+                return faker.options().option("Delhi", "Gurgaon", "Noida");
+            case "Uttar Pradesh":
+                return faker.options().option("Agra", "Lucknow", "Merrut");
+            case "Haryana":
+                return faker.options().option("Karnal", "Panipat");
+            case "Rajasthan":
+                return faker.options().option("Jaipur", "Jaiselmer");
+            default:
+                return null;
         }
-
-        if (usersState.equals("Uttar Pradesh")) {
-            return faker.options().option("Agra", "Lucknow", "Merrut");
-        }
-
-        if (usersState.equals("Haryana")) {
-            return faker.options().option("Karnal", "Panipat");
-        }
-
-        if (usersState.equals("Rajasthan")) {
-            return faker.options().option("Jaipur", "Jaiselmer");
-        }
-
-        return null;
     }
+
 
 }
