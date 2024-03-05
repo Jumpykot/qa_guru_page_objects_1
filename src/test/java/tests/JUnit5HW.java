@@ -23,7 +23,6 @@ public class JUnit5HW extends TestBaseChelseaHW{
         $("[data-testid='search__field']").shouldHave(attribute("placeholder", "What are you looking for?"));
     }
 
-
     @ValueSource(strings = {
             "Silva", "Mudryk", "Jackson"
     })
