@@ -1,0 +1,9 @@
+{
+  "name": "Vlad",
+  "age": 29,
+  "hobby": ["football", "video games"],
+  "passport": {
+    "number": 273132456,
+    "issuer": "МВД"
+  }
+}
