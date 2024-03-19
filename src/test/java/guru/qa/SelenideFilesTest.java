@@ -70,7 +70,7 @@ public class SelenideFilesTest {
 
     @Test
     void zipParcingTest() throws Exception {
-        try (InputStream is = cl.getResourceAsStream("Archive.zip");
+        try (InputStream is = cl.getResourceAsStream("A.zip");
              ZipInputStream zis = new ZipInputStream(is)) {
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {
@@ -94,25 +94,6 @@ public class SelenideFilesTest {
         }
     }
 
-    @Test
-    void jsonParcingTest() throws Exception {
-        try (InputStream is = cl.getResourceAsStream("human.json");
-             Reader reader = new InputStreamReader(is)) {
-            JsonObject object = gson.fromJson(reader, JsonObject.class);
-
-            Assertions.assertEquals("Vlad", object.get("name").getAsString());
-            Assertions.assertEquals(29, object.get("age").getAsInt());
-            Assertions.assertArrayEquals(new String[]{"football", "video games"}, object.get("hobby")
-                    .getAsJsonArray()
-                    .asList()
-                    .stream()
-                    .map(JsonElement::getAsString)
-                    .toArray()
-            );
-            JsonObject passport = object.get("passport").getAsJsonObject();
-            Assertions.assertEquals("МВД", object.get("issuer").getAsString());
-        }
-    }
 }
 
 

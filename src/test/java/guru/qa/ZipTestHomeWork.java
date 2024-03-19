@@ -3,8 +3,6 @@ package guru.qa;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
-
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +19,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Чтения и проверка файлов PDF, ZIP, XLSX из zip")
 public class ZipTestHomeWork {
+
     private final ClassLoader cl = ZipTestHomeWork.class.getClassLoader();
+    boolean fileExists = false;
+
 
     @Test
     @DisplayName("Чтения и проверка CSV файла из архива zip")
@@ -34,8 +35,12 @@ public class ZipTestHomeWork {
                     CSVReader csvReader = new CSVReader(new InputStreamReader(zis));
                     List<String[]> content = csvReader.readAll();
                     assertThat(content.get(0)).isEqualTo(new String[]{"make", "model"});
+                    fileExists = true;
+                    break;
+
                 }
             }
+            assertThat(fileExists).withFailMessage("CSV file does not exist in the archive").isEqualTo(true);
         }
     }
 
@@ -51,8 +56,11 @@ public class ZipTestHomeWork {
                     XLS xls = new XLS(zis);
                     String name = xls.excel.getSheet("Sheet1").getRow(2).getCell(1).getStringCellValue();
                     assertThat(name).isEqualTo("Doug");
+                    fileExists = true;
+                    break;
                 }
             }
+            assertThat(fileExists).withFailMessage("xlsx file does not exist in the archive").isEqualTo(true);
         }
     }
 
@@ -66,8 +74,11 @@ public class ZipTestHomeWork {
                 if (entry.getName().endsWith(".pdf") && !entry.getName().startsWith("__MACOSX/")) {
                     PDF pdf = new PDF(zis);
                     assertTrue(pdf.text.contains("JUnit 5 User Guide"));
+                    fileExists = true;
+                    break;
                 }
             }
+            assertThat(fileExists).withFailMessage("PDF file does not exist in the archive").isEqualTo(true);
         }
     }
 }
