@@ -6,7 +6,6 @@ import com.opencsv.CSVReader;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
@@ -47,7 +46,7 @@ public class ZipTestHomeWork {
 
     @Test
     @DisplayName("Чтения и проверка XLSX файла из архива ZIP")
-    void zipXlsxParsingTest() throws IOException {
+    void zipXlsxParsingTest() throws Exception {
         try (InputStream is = cl.getResourceAsStream("A.zip");
              ZipInputStream zis = new ZipInputStream(is)) {
             ZipEntry entry;
